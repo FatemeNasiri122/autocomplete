@@ -54,7 +54,6 @@ const Combobox: React.FC<Props> = ({ data }) => {
                         <span className="item">no data found</span> :
                         data.filter((item) => item.title.includes(search)).map((item) =>
                             <button
-                                // ref={selected === item.title ? scrollRef : notScrollRef}
                                 key={item.id}
                                 className={`item ${(selected === item.title || data.filter((item) => item.title.includes(search)).length === 1) && "item-active"}`}
                                 onClick={() => handleSelect(item.title)}
@@ -63,7 +62,6 @@ const Combobox: React.FC<Props> = ({ data }) => {
                                 <span className="title">{item.title}</span>
                             </button>)
                         : data.map(item => <button
-                            // ref={selected === item.title ? scrollRef : notScrollRef}
                             key={item.id}
                             className={`item ${selected === item.title && "item-active"}`}
                             onClick={() => handleSelect(item.title)}
