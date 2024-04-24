@@ -135,6 +135,10 @@ button {
   background-color: transparent;
 }
 
+.error-text {
+  color: var(--red);
+}
+
 .combo-container {
   width: 100%;
   display: flex;
