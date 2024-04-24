@@ -22,6 +22,7 @@ const Combobox: React.FC<Props> = ({ data }) => {
 
     const toggleComboItems = () => {
         setOpen(prev => !prev);
+        setSearching(false);
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
